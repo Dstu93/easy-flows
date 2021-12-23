@@ -23,6 +23,8 @@
  */
 package org.jeasy.flows.work;
 
+import org.jeasy.flows.work.context.WorkContext;
+
 /**
  * Default implementation of {@link WorkReport}.
  *

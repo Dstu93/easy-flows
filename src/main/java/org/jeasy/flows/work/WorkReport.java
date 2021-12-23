@@ -23,6 +23,8 @@
  */
 package org.jeasy.flows.work;
 
+import org.jeasy.flows.work.context.WorkContext;
+
 /**
  * Execution report of a unit of work.
  *

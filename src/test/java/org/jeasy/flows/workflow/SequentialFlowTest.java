@@ -27,7 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.jeasy.flows.work.Work;
-import org.jeasy.flows.work.WorkContext;
+import org.jeasy.flows.work.context.WorkContext;
 import org.junit.Test;
 import org.mockito.InOrder;
 import org.mockito.Mockito;
