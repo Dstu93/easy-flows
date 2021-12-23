@@ -16,6 +16,22 @@
 
 ***
 
+## WIP Fork
+
+this is a fork of Easy Flows to achieve the following goals and fit the engine better in my use case.
+
+#### WIP Features
+
+- [ ] make WorkContext more typesafe
+- [ ] makes a workflow and the engine cancellable and allow graceful shutdown for implementation 
+- [ ] allow access for the application to a read-only workflow context
+- [ ] allow the State of a Work to be "pending"
+- [ ] allow to send an external event to a workflow instance
+- [ ] implement a persistent engine
+- [ ] add user tasks that are pending to external events
+
+-----------------
+
 ## Latest news
 
 * 08/10/2020: Easy Flows 0.3 has been released with a number of new features and improvements. You can find all details in the release notes [here](https://github.com/j-easy/easy-flows/releases).
