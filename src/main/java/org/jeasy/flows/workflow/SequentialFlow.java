@@ -24,12 +24,13 @@
 package org.jeasy.flows.workflow;
 
 import org.jeasy.flows.work.Work;
-import org.jeasy.flows.work.WorkContext;
 import org.jeasy.flows.work.WorkReport;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import org.jeasy.flows.work.context.WorkContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

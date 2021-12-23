@@ -23,8 +23,8 @@
  */
 package org.jeasy.flows.engine;
 
-import org.jeasy.flows.work.WorkContext;
 import org.jeasy.flows.work.WorkReport;
+import org.jeasy.flows.work.context.WorkContext;
 import org.jeasy.flows.workflow.WorkFlow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

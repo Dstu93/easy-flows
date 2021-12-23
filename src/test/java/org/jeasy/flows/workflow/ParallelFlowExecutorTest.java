@@ -26,9 +26,9 @@ package org.jeasy.flows.workflow;
 import org.assertj.core.api.Assertions;
 import org.jeasy.flows.work.DefaultWorkReport;
 import org.jeasy.flows.work.Work;
-import org.jeasy.flows.work.WorkContext;
 import org.jeasy.flows.work.WorkReport;
 import org.jeasy.flows.work.WorkStatus;
+import org.jeasy.flows.work.context.WorkContext;
 import org.junit.Test;
 import org.mockito.Mockito;
 

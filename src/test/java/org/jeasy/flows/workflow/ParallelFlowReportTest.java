@@ -25,8 +25,8 @@ package org.jeasy.flows.workflow;
 
 import org.assertj.core.api.Assertions;
 import org.jeasy.flows.work.DefaultWorkReport;
-import org.jeasy.flows.work.WorkContext;
 import org.jeasy.flows.work.WorkStatus;
+import org.jeasy.flows.work.context.WorkContext;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,7 +38,7 @@ public class ParallelFlowReportTest {
 	@Before
 	public void setUp() {
 		exception = new Exception("test exception");
-		WorkContext workContext = new WorkContext();
+		WorkContext workContext = WorkContext.create();
 		parallelFlowReport = new ParallelFlowReport();
 		parallelFlowReport.add(new DefaultWorkReport(WorkStatus.FAILED, workContext, exception));
 		parallelFlowReport.add(new DefaultWorkReport(WorkStatus.COMPLETED, workContext));

@@ -22,7 +22,7 @@ this is a fork of Easy Flows to achieve the following goals and fit the engine b
 
 #### WIP Features
 
-- [ ] make WorkContext more typesafe
+- [X] make WorkContext more typesafe
 - [ ] makes a workflow and the engine cancellable and allow graceful shutdown for implementation 
 - [ ] allow access for the application to a read-only workflow context
 - [ ] allow the State of a Work to be "pending"

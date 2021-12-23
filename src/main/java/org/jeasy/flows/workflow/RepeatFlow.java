@@ -25,9 +25,9 @@ package org.jeasy.flows.workflow;
 
 import org.jeasy.flows.work.NoOpWork;
 import org.jeasy.flows.work.Work;
-import org.jeasy.flows.work.WorkContext;
 import org.jeasy.flows.work.WorkReportPredicate;
 import org.jeasy.flows.work.WorkReport;
+import org.jeasy.flows.work.context.WorkContext;
 
 import java.util.UUID;
 
