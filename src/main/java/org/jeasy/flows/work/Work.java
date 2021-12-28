@@ -47,9 +47,7 @@ public interface Work {
      * 
      * @return name of the unit of work.
      */
-    default String getName() {
-        return UUID.randomUUID().toString();
-    }
+    String getName();
 
     /**
      * Execute the unit of work and return its report. Implementations are required
