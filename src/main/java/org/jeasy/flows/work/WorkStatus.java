@@ -36,6 +36,11 @@ public enum WorkStatus {
     FAILED,
 
     /**
+     * The unit of work is in a 'pending' state and waits for an external event to continue
+     */
+    PENDING,
+
+    /**
      * The unit of work has completed successfully
      */
     COMPLETED
