@@ -23,9 +23,10 @@
  */
 package org.jeasy.flows.engine;
 
-import org.jeasy.flows.work.WorkReport;
+import org.jeasy.flows.event.EventChannel;
+import org.jeasy.flows.event.ExternalEvent;
 import org.jeasy.flows.work.context.WorkContext;
-import org.jeasy.flows.workflow.WorkFlow;
+import org.jeasy.flows.workflow.definition.WorkflowKey;
 
 /**
  * Interface for a workflow engine.
@@ -34,13 +35,24 @@ import org.jeasy.flows.workflow.WorkFlow;
  */
 public interface WorkFlowEngine {
 
+
+    String startWorkflow(WorkflowKey workflowKey, WorkContext workContext);
+
     /**
-     * Run the given workflow and return its report.
+     * starts a new instance of the workflow of the given workflowId.
+     * Starts always the registered workflow with the highest version
+     * @param workflowId the uuid of the workflow
+     * @param workContext the additional context
      *
-     * @param workFlow to run
-     * @param workContext context in which the workflow will be run
-     * @return workflow report
+     * @return the uuid of this workflow instance
      */
-    WorkReport run(WorkFlow workFlow, WorkContext workContext);
+    String startWorkflow(String workflowId, WorkContext workContext);
+
+
+    /**
+     * returns an EventChannel to send Events to send {@link ExternalEvent}s to a specific workflow that is processed by this engine
+     * @return the channel to send events
+     */
+    EventChannel getEventChannel();
 
 }
