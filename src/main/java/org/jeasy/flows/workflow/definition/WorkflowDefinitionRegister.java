@@ -4,6 +4,8 @@ import java.util.Optional;
 
 /**
  * Class for registering and holding the {@link WorkflowDefinition} to make workflows known to the engine
+ *
+ * @implSpec this class is thread-safe
  */
 public interface WorkflowDefinitionRegister {
 
