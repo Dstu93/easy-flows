@@ -23,6 +23,10 @@
  */
 package org.jeasy.flows.workflow;
 
+import org.jeasy.flows.event.EventState;
+import org.jeasy.flows.event.ExternalEvent;
+import org.jeasy.flows.work.context.WorkContext;
+
 abstract class AbstractWorkFlow implements WorkFlow {
 
     private final String name;
@@ -33,5 +37,10 @@ abstract class AbstractWorkFlow implements WorkFlow {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public EventState handleEvent(ExternalEvent event, WorkContext workContext) {
+        return EventState.DISCARDED;
     }
 }

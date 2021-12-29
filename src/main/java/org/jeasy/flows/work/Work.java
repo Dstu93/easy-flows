@@ -23,6 +23,8 @@
  */
 package org.jeasy.flows.work;
 
+import org.jeasy.flows.event.EventState;
+import org.jeasy.flows.event.ExternalEvent;
 import org.jeasy.flows.work.context.WorkContext;
 
 import java.util.UUID;
@@ -58,4 +60,18 @@ public interface Work {
      * @return the execution report
      */
     WorkReport execute(WorkContext workContext);
+
+    /**
+     * handle the external event send to this workflow.
+     * This implementation needs to be thread safe because its possible called from a different thread than this workflow.
+     * Events will be only send to pending units and before the {@link Work#execute(WorkContext)}.
+     * <br>
+     * <br>
+     * If {@link EventState#PROCESSED} is returned the work continues its execution, otherwise not.
+     *
+     * @param event the event for this unit of work
+     * @param workContext of this unit, workContext can be manipulated to enrich it with information of this event to continue the processing
+     * @return EventState to indicate the result of this handled event
+     */
+    EventState handleEvent(ExternalEvent event, WorkContext workContext);
 }
